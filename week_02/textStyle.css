@@ -1,0 +1,28 @@
+html{
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: .95rem;
+    text-transform: capitalize;
+    text-shadow: 2px 2px grey;
+}
+
+h2{
+    font-size: .90rem;
+}
+h3{
+    font-size: .85rem;
+}
+p{
+    font-size: .75rem;
+    line-height: 1.5em;
+    white-space:pre-line; 
+}
+
+
+
+h1, h2, h3{
+    text-align: center;
+}

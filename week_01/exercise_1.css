@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./Roboto/Roboto-Black.ttf");
+    
+    }
+body{
+    font-family: Roboto;
+}
+#e1List{
+    background: url("./images/ugaLogo.png");
+}
+
+a{
+    display: block;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: red;
+    border: 1px solid blue;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover{
+    background-color: grey;
+    color: black;
+    border: 5px solid blue;
+}
+
+a:active{
+    background-color: green;
+}
+
+a:focus{
+    background-color: purple;
+}
+
+a:visited{
+    background-color: grey;
+    color: black;
+    
+}

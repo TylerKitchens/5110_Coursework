@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise A</title>
+
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        #central {
+            height: 30rem;
+            width: 30rem;
+            background-image: radial-gradient(circle, red, white, blue);
+        }
+
+a{
+    font-size: 2.4rem;
+}
+        a:hover {
+            outline-style: solid;
+            outline-color: black;
+            outline-width: 15px;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div id="central">
+
+    </div>
+
+    <a href="https://google.com">Link</a>
+<br>
+    <button onclick="changeColor()">Click Me</button>
+
+    <script>
+        function changeColor(){
+            document.getElementById("central").style.backgroundImage = "radial-gradient(circle, green, yellow, red)"
+        }
+    </script>
+</body>
+
+</html>

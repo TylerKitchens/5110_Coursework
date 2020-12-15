@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 400px;
+        }
+        .gradStyle {
+            background-color: black; 
+            width: 400px;
+            color: white;
+        }
+        .uGradStyle {
+            background-color: red; width: 400px;
+        }
+        .more30 {
+            font-size: .9em;
+        }
+        .less30{
+            font-size: 1.7em;
+        }
+    </style>
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div id="us"  >
+        <h1>{{title}}</h1>
+        <div v-for="eachStudent in yall" :class = "[eachStudent.section == '7110' ? gradStyle : uGradStyle, eachStudent.fact.length < 30 ? less30 : more30]" >
+            <h2>{{fullName()}}</h2>
+            <p>{{eachStudent.fact}}</p>
+            <img :src="dompart1+eachStudent.domain+dompart2">
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="youguys.js"></script>

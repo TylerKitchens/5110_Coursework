@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+ <link rel="stylesheet" href="ship.css">
+</head>
+
+<body>
+   
+    <div id="ship">
+        <div id="shipLight"></div>
+    </div>
+
+    <button onclick="reverse()">Reverse</button>
+    <button onclick="rotate()">Spin It</button>
+</body>
+</html>
+<script>
+    var direction = 1
+    var howfar = 0
+    var light = 0
+    var spin = 0
+    var isSpinning = false
+    let ship = document.querySelector('#ship');
+    let shipLight = document.querySelector('#shipLight')
+
+
+    setInterval(function() {
+        howfar += 5 * direction
+        light++
+        
+
+        ship.style.left = howfar + "px"
+        if( (howfar * direction) > (1000)){
+            howfar  = -300 * direction 
+        }
+
+        if(light * direction == 25 * direction){
+            shipLight.style.backgroundColor = 'black'
+        }
+        if(light * direction  == 50 * direction){
+            shipLight.style.backgroundColor = 'red'
+            light = 0
+            
+        }
+
+        //flip it around
+        if(isSpinning){
+            spin += 10
+            ship.style.transform = "rotate(" + spin + "deg)"
+        }
+     
+}, 10);
+
+function rotate(){
+    isSpinning = !isSpinning
+}
+
+function reverse(){
+    //flip the global var
+    direction *= -1
+}
+   
+   
+</script>

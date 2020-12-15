@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="us">
+        <!--
+        STEP 1
+
+        <div v-for="eachStudent in yall">
+            <h2>{{eachStudent.stu_name}}  {{eachStudent.last_name}}</h2>
+            <p>{{eachStudent.fact}}</p>
+            <img :src="dompart1+eachStudent.domain+dompart2" width="200px" >
+            <hr>
+        </div>
+         -->
+
+        <!--
+        STEP 2
+            
+         <button v-on:click="showPic">ClassMates</button>
+         <h2>{{stuname}}</h2>
+           -->
+           <select v-model='oswald' v-on:change="displayImage()">
+               <option v-for="eachStudent in yall" :value='dompart1 + eachStudent.domain+dompart2'>{{eachStudent.stu_name}}</option>
+           </select>
+           <p>{{oswald}}</p>
+        <img :src="image" alt="" width="200px">
+    </div>
+    <script src="youguys.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Week 1 introduction HTML Basics: Bio">
+    <meta name="author" content="Tyler Kitchens">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>HW 1</title>
+    <style>
+        #links {
+            overflow: hidden;
+        }
+
+        #links li{
+            display: inline;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body id ="body" style="background-color: #efefef;">
+    <div class="container">
+        <h1 id="top" class="text-center display-2">Tyler Kitchens</h1>
+        <p class="text-center"><button class="btn btn-primary" onclick="changeColor()">Change Color</button></p>
+        <h2>Links</h2>
+        <ul id="links" class="list-group-horizontal">
+            <li><a href="/details/about.html">Details</a></li>
+            <li><a href="details/about.html#hate">Things Hated</a></li>
+            <li><a href="details/about.html#highschool">High School</a></li>
+            <li><a href="details/about.html#favorites">Favorites</a></li>
+            <li><a href="#top">Home</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">External Link</a></li>
+
+        </ul>
+        <ul>
+            <li>
+                <p class="lead">Hobbies</p>
+                <ul>
+                    <li>Playing Guitar</li>
+                    <li>Fishing</li>
+                    <li>Running</li>
+                </ul>
+            </li>
+            <li>
+                <p class="lead">Programming Languages</p>
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>JS</li>
+                    <li>Kotlin</li>
+                    <li>Swift</li>
+                    <li>etc</li>
+                </ul>
+            </li>
+
+        </ul>
+        <h2>Emphasis</h2>
+        <p class="lead"><strong>This is bolded with a strong tag</strong> <em>while this text is emphasized</em>.
+            <i>This text is is in italic </i>, <b>this text is bold</b> and finally <u>this is underlined</u> </p>
+        <p><a href="../images/me.jpg" alt="picture of me" title="Tyler Kitchens"><img src="../images/me.jpg"
+                    class="img-thumbnail roudned mx-auto d-block"></a< /p>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script>
+     
+
+        function changeColor(){
+            var colors = ["yellow", "green", "purple"]
+            $("#body").css("background-color", colors[(Math.floor(Math.random() * 3))])
+        }
+
+        
+    </script>
+</body>
+
+</html>

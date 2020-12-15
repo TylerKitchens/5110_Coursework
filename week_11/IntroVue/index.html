@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Prologue by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<div id="header">
+
+		<div class="top">
+
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image avatar48"> <img :src="avatar" alt="" /></span>
+				<h1 id="title">{{yourName}}</h1>
+				<p>{{description}}</p>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#top" id="top-link"><span class="icon solid fa-home">{{link1}}</span></a></li>
+					<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">{{link2}}</span></a>
+					</li>
+					<li><a href="#about" id="about-link"><span class="icon solid fa-user">{{link3}}</span></a></li>
+					<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">{{link4}}</span></a>
+					</li>
+					<li><a href="#list" id="contact-link"><span class="icon solid fa-envelope">{{link5}}</span></a></li>
+					<li><a href="#conditional" id="contact-link"><span
+								class="icon solid fa-envelope">{{link6}}</span></a></li>
+					<li><a href="#function" id="contact-link"><span class="icon solid fa-envelope">{{link7}}</span></a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<div class="bottom">
+
+			<!-- Social Icons -->
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Intro -->
+		<section id="top" class="one dark cover">
+			<div class="container" id="intro">
+
+				<header>
+					<h2 class="alt">{{title}}</p>
+				</header>
+
+				<footer>
+					<a href="#portfolio" class="button scrolly">Portfolio</a>
+				</footer>
+
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+		<section id="portfolio" class="two">
+			<div class="container">
+
+				<header>
+					<h2>{{portfolioTitle}}</h2>
+				</header>
+
+				<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
+					egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
+					Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
+					fusce hendrerit lacus ridiculus.</p>
+
+				<div class="row">
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img1" alt="" /></a>
+							<header>
+								<h3>{{imgTxt1}}</h3>
+							</header>
+						</article>
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img2" alt="" /></a>
+							<header>
+								<h3>{{imgTxt2}}</h3>
+							</header>
+						</article>
+					</div>
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img3" alt="" /></a>
+							<header>
+								<h3>{{imgTxt3}}</h3>
+							</header>
+						</article>
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img4" alt="" /></a>
+							<header>
+								<h3>{{imgTxt4}}</h3>
+							</header>
+						</article>
+					</div>
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img5" alt="" /></a>
+							<header>
+								<h3>{{imgTxt5}}</h3>
+							</header>
+						</article>
+						<article class="item">
+							<a href="#" class="image fit"><img :src="img6" alt="" /></a>
+							<header>
+								<h3>{{imgTxt6}}</h3>
+							</header>
+						</article>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- About Me -->
+		<section id="about" class="three">
+			<div class="container">
+
+				<header>
+					<h2>About Me</h2>
+				</header>
+
+				<a href="#" class="image featured"><img :src="img" alt="" /></a>
+
+				<p>{{about}}</p>
+
+			</div>
+		</section>
+
+		<!--List-->
+		<section class="two" id="list">
+			<h3 class='display-2'>Favorites 2</h3>
+			<div class="container">
+				<ol style="width: 40%; margin-left: 30%;">
+					<li v-for="favorite in favorites">{{favorite}}</li>
+				</ol>
+			</div>
+
+		</section>
+
+		<!--Conditional-->
+		<section class="two" id="conditional">
+			<h2 class='display-2'>Conditional </h2>
+
+			<div class="alert alert-primary" role='alert' v-if="teacherName == 'Emuel'">Correct. The teacher's name is
+				{{teacherName}} </div>
+			<p class="lead" v-if="teacherName !='Emuel' && teacherName == '' "></p>
+			<div class="row justify-content-center">
+				<div class="col">
+					<p class="lead">What is the name of your teacher?</p>
+				</div>
+				<div class="col">
+					<input v-model='teacherName'>
+				</div>
+			</div>
+			<p class="lead" v-if="classNumber == '5110'">Correct. The class's number is {{classNumber}} </p>
+			<p class="lead" v-if="classNumber !='5110' && classNumber == '' "></p>
+
+			<div class="row justify-content-center">
+				<div class="col">
+					<p class="lead">What is the number of this class?</p>
+				</div>
+				<div class="col">
+					<input v-model='classNumber'>
+				</div>
+			</div>
+
+			<p class='lead'>What is the name of the teacher</p>
+			<p style='cursor: pointer' v-on:click="teacherName='Emuel'"> Emuel</p>
+			<p style='cursor: pointer' v-on:click="teacherName='John'"> John</p>
+			<p style='cursor: pointer' v-on:click="teacherName='Chris'"> Chris</p>
+			<p style='cursor: pointer' v-on:click="teacherName='Meghan'"> Meghan</p>
+
+
+		</section>
+
+		<!--Function-->
+		<section id="function">
+			<div class="row">
+
+
+				<div class="col-md-6">
+					<div id="test" class='text-center' style="width: 300px; height:300px; float:left;"
+						:style="{backgroundColor : bgColor}">
+						<p class='text-center' v-for="color in colors" @mouseover='changeColor(color)'> {{color}}</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div id="test2" style="background-color: green" class='text-center' :style="{width : width}">
+						<p class='text-center' v-for="width in widths" @mouseover='changeWidth(width)'> {{width}}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Contact -->
+		<section id="contact" class="four">
+			<div class="container">
+
+				<header>
+					<h2>Contact</h2>
+				</header>
+
+				<p>{{desc}}</p>
+
+				<form method="post" action="#">
+					<div class="row">
+						<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+						<div class="col-12">
+							<textarea name="message" placeholder="Message"></textarea>
+						</div>
+						<div class="col-12">
+							<input type="submit" value="Send Message" />
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/newVue.js"></script>
+
+</body>
+
+</html>

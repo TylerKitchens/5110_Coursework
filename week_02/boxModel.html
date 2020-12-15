@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        h1 {
+            font-size: 50px
+        }
+
+        header::first-letter{
+            font-size: 44px;
+        }
+        header::first-line{
+            color: rgba(255, 0, 0, 0.8)
+        }
+        h2{
+            transform: skewY(10deg);
+        }
+
+        #one{
+            background-color: #aec27c;
+            padding: 15px;
+           
+            text-align: center;
+          
+            border-style: solid;
+            border-width: 8px;
+            border-bottom-color: #081075;
+            border-left-color: #081075;
+            border-top-color: #0e1fc6;
+            border-right-color: #0e1fc6;
+
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            
+        }
+        #one-container{
+            border-style: solid;
+            border-width: 8px;
+            border-top-color: #081075;
+            border-right-color: #081075;
+            border-bottom-color: #0e1fc6;
+            border-left-color: #0e1fc6;
+            width: 20%;
+            border-radius: 15px;
+        }
+        #two{
+            background: linear-gradient(red, 10%, black); 
+            color: white;
+            outline:8px dashed blue;
+            margin: 8px;
+            padding: 15px;
+            width: 30%;
+            margin-top: 5%;
+            text-shadow: 2px 4px grey;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(blue, 10%, pink);">
+    <h1>Pseudo Elements</h1>
+    <header>
+        It was the best of times,
+        <br> it was the worst of times.
+    </header>
+
+    <h2>Rotation example</h2>
+
+
+    <h3>
+        Challenges
+    </h3>
+
+    <div id="one-container">
+        <p id="one">example one of border, padding, etc.</p>
+    </div>
+
+    <p id="two">example two of border, padding, etc.</p>
+ 
+</body>
+
+</html>

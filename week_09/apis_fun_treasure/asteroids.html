@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API's Fun and Treasure</title>
+    <style>
+        div{
+            border-radius: 50%;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="count"></p>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+
+            $.getJSON('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=r29PlBfD2ZPIr5AcS6tIFR4RxGHUtdiLr9DFObzY', data => {
+
+                $('#count').text(data.near_earth_objects.length)
+                let dataSource = data.near_earth_objects
+                let asteroidDisplay = document.querySelector('body')
+                console.log(dataSource)
+                for (var i = 0; i < dataSource.length; i++) {
+                      console.log(dataSource[i].estimated_diameter.kilometers.estimated_diameter_max)
+                    // $("#showData").append(dataSource[i].estimated_diameter.kilometers.estimated_diameter_max + "<br>")
+                    let maxWidth = dataSource[i].estimated_diameter.kilometers.estimated_diameter_max *100;
+                    let minWidth = dataSource[i].estimated_diameter.kilometers.estimated_diameter_min *100;
+                    
+                    let backgroundColor = dataSource[i].is_potentially_hazardous_asteroid ? "red" : "#000";
+
+                    let cont = "<div style='position: relative;'>" 
+                    cont += "<div style='background-color:" + backgroundColor + "; width: " + maxWidth + "px;height:" + maxWidth + "px; '> </div>"
+                    cont += "<div style='position: absolute; margin-left: 35%; margin-top: 50%; text-align: center; background-color: gray; width: " + minWidth + "px;height:" + minWidth + "px; '> </div>"
+                    cont += "</div>"
+                    asteroidDisplay.innerHTML += cont
+                }
+            })
+
+
+
+        })
+    </script>
+</body>
+
+</html>
